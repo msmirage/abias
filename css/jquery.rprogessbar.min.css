@@ -1,0 +1,37 @@
+.progressbar {
+    width: 100%;
+background-color: #000 !important;
+border-radius: 0px;
+border: 5px solid #000;
+border-radius: 10px !important;
+}
+
+.proggress {
+    height: 8px !important;
+    width: 10px ;
+    background-color: rgb(60, 255, 0) !important;
+    border-radius: 10px !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+.proggress::before {
+	
+	position: absolute;
+	top: -12px;
+	right: 0;
+    width: 6px;
+	height: 32px !important;
+	background: #fff;
+	content: "";
+	border-radius: 10px;
+}
+
+.percentCount {
+    float: right;
+    margin-top: -42px;
+    clear: both;
+    font-weight: 700;
+    font-size: 13px;
+    color: #777777;
+}

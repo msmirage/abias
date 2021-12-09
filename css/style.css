@@ -1,0 +1,676 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.main{
+    display: flex;
+}
+
+.top{
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: none;
+}
+
+/* ================================
+        navbar start
+=================================== */
+nav{
+    transition: .4s;
+}
+nav .logo{
+    width: 30%;
+}
+
+nav .logo img{
+    margin-top: 10px;
+}
+nav .nav-item {
+    width: 50%;
+    background: #0e0a2d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px 0;
+    padding-left: 30px;
+    border-bottom-left-radius: 40px;
+}
+
+
+nav .nav-item ul li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav .nav-item ul li a{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.menufixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: red;
+    z-index: 9999;
+    padding: 20px 0;
+  
+}
+
+.menufixed .nav-item{
+    background: transparent;
+    padding: 45px 0;
+}
+
+.menufixed .nav-item ul li a{
+    color: #000;
+
+}
+/* ================================
+        navbar end
+=================================== */
+/* ================================
+        banner start
+=================================== */
+#banner-part h4{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #5f24ef;
+    margin-top: 300px;
+}
+#banner-part h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 80px;
+    font-weight: bolder;
+    color: #1c0e3e;
+    margin: 30px 0;
+}
+
+#banner-part h1 span{
+    color: #5f24ef;
+}
+
+#banner-part h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+    font-weight: bolder;
+    color: #1c0e3e;
+}
+
+#banner-part p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1c0e3e;
+    margin-top: 30px;
+}
+
+#banner-part a{
+    display: inline-block;
+    background: #5f24ef;
+    padding: 10px 20px;
+    color: #fff;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom-right-radius: 20px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#banner-part a:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 75%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+    transition: .4s;
+}
+
+#banner-part a::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 85%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+    transition: .4s;
+}
+
+#banner-part a:hover:after{
+    width: 122%;
+}
+
+#banner-part a:hover:before{
+    width: 122%;
+}
+
+#banner-part .bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+#banner-part .man{
+    position: absolute;
+    top: 57px;
+    right: 0;
+}
+
+#banner-part .shape{
+    position: absolute;
+    top: 197px;
+    left: 0;
+}
+/* ================================
+        banner end
+=================================== */
+/* ================================
+        counter start
+=================================== */
+
+
+#counter-part{
+    position: relative;
+}
+
+#counter-part:after{
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    z-index: -1;
+}
+#counter-part .round{
+    padding: 70px 0;
+    background: linear-gradient(45deg, #08bbf6 0%, #6122ef 63%);
+    margin-top: 300px;
+    border-radius: 100px;
+}
+
+#counter-part .main{
+    justify-content: space-evenly;
+}
+
+#counter-part .item{
+    width: 22%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+#counter-part .item p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#counter-part .item:after{
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    width: 70%;
+    height: 2px;
+    content: "";
+    transition: .4s;
+}
+
+#counter-part .item:hover:after{
+    width: 80%;
+}
+
+/* ================================
+        counter end
+=================================== */
+/* ================================
+        about start
+=================================== */
+#about-part{
+    margin-top: 100px;
+}
+
+#about-part .tringle{
+    width: 20px;
+    height: 20px;
+    background: #08bbf6;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    left: 200px !important;
+    top: 600px !important;
+}
+#about-part .tringle2{
+    width: 20px;
+    height: 20px;
+    background: red;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    left: 800px !important;
+    top: 300px !important;
+}
+
+#about-part .round{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: greenyellow;
+    left: 200px !important;
+    top: 200px !important;
+}
+#about-part .round2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(0, 204, 255);
+    left: 1000px !important;
+    top: 300px !important;
+}
+#about-part .round3{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(214, 34, 199);
+    left: 900px !important;
+    top: 300px !important;
+}
+#about-part .img2{
+    left: 900px !important;
+    top: 500px !important;
+}
+#about-part .title{
+    position: relative;
+}
+#about-part .title h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 101px;
+    font-weight: 600;
+    color: rgb(224, 224, 224);
+    text-transform: uppercase;
+}
+#about-part .title h4{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+/* ================================
+        about end
+=================================== */
+/* ================================
+        service start
+=================================== */
+#service-part{
+    margin: 200px 0;
+    background: #edf4f9;
+    padding: 100px 0;
+    padding-top: 200px ;
+    position: relative;
+}
+
+#service-part .shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#service-part .main{
+    justify-content: space-between;
+}
+#service-part .item{
+    width: 30%;
+    height: 300px;
+    background: red;
+    position: relative;
+    overflow: hidden;
+}
+
+#service-part .item::after {
+	position: absolute;
+	bottom: -113px;
+	right: -109px;
+	width: 200px;
+	height: 200px;
+	background: green;
+	border: 10px solid #000;
+	content: "";
+	transform: rotate(45deg);
+    transition: .4s;
+}
+
+#service-part .item:hover::after {
+	bottom: -241px;
+	right: -98px;
+}
+/* ================================
+        service end
+=================================== */
+/* ================================
+        portfilo start
+=================================== */
+#portfolio-part{
+    background: url(../images/portfolio_bg.jpg) no-repeat center;
+    background-size: cover;
+
+}
+
+#portfolio-part .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 100px 0
+}
+
+#portfolio-part .overlay .top{
+    width: 80%;
+    position: relative;
+}
+
+#portfolio-part .overlay .top .right-shape {
+	width: 300px;
+	height: 300px;
+	background: red;
+	position: absolute;
+	bottom: 0;
+	right: -234px;
+    border-radius: 20px;
+    border-bottom-right-radius: 60px;
+}
+
+#portfolio-part .overlay .top-item{
+    width: 100%;
+    background: url(../images/port_thumb_3.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    -webkit-box-shadow: inset -5px -132px 59px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow: inset -5px -132px 59px -10px rgba(0,0,0,0.7);
+    box-shadow: inset -5px -132px 59px -10px rgba(0,0,0,0.7);
+    
+    border-radius: 20px;
+    border-bottom-right-radius: 60px;
+}
+
+#portfolio-part .overlay .top-item img{
+    width: 100%;
+
+}
+
+#portfolio-part .overlay .bottom-item{
+    background: red;
+    margin: 0 15px;
+    position: relative;
+}
+
+#portfolio-part .overlay .bottom-item img{
+    width: 100%;
+}
+
+#portfolio-part .overlay .bottom-item .button{
+    display: inline-block;
+    padding: 10px;
+    background: #1c0e3e;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    transition: .4s;
+
+}
+
+#portfolio-part .overlay .slick-center .button{
+    background: transparent;
+    text-decoration: underline;
+
+}
+/* ================================
+        portfilo end
+=================================== */
+/* ================================
+        process start
+=================================== */
+#process-part{
+    margin: 500px 0;
+    position: relative;
+}
+#process-part .main{
+    justify-content: space-between;
+    position: relative;
+}
+
+#process-part .main:after{
+    position: absolute;
+    top: 165px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    content: "";
+    z-index: -2;
+}
+#process-part .line{
+    position: absolute;
+    top: 165px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: red;
+    content: "";
+    z-index: -1;
+    transition: .4s;
+}
+#process-part .item{
+    width: 23%;
+}
+#process-part .item .round{
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+#process-part .item .inner-round{
+    width: 80px;
+    height: 80px;
+    background: red;
+    border-radius: 50%;
+}
+
+#process-part .item .round1{
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    
+}
+
+#process-part .item .inner-round1{
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+}
+/* ================================
+        process end
+=================================== */
+/* ================================
+        mix start
+=================================== */
+#mix-part{
+    margin: 200px 0;
+}
+
+#mix-part .left{
+    width: 50%;
+    background: red;
+    position: relative;
+}
+
+#mix-part .right{
+    width: 50%;
+    height: 500px;
+    background: rgb(60, 255, 0);
+}
+
+
+#mix-part .left .top-shape {
+	width: 400px;
+	height: 263px;
+	background: #fff;
+	position: absolute;
+	top: 104px;
+	left: 276px;
+}
+#mix-part .left .item .box {
+	width: 400px;
+	height: 263px;
+	background: #fff;
+	margin: 104px auto;
+	position: relative;
+	top: 0px;
+	left: 0px;
+    transition: .4s;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+}
+#mix-part .left .slick-current .box {
+	top: -43px;
+	left: -36px;
+}
+
+#mix-part .left .bslider{
+    height: 200px;
+    margin: 0 15px;
+}
+
+#mix-part .left .bslider .round{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    position: relative;
+    transition: .4s;
+    transform: scale(1);
+    margin: 20px 0;
+}
+
+#mix-part .left .bslider .round img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+
+#mix-part .left .bslider .round .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s;
+}
+
+#mix-part .left .slick-center .round{
+    border-color: green;
+    transform: scale(1.3);
+}
+
+#mix-part .left .slick-center .round .overlay{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#mix-part .right .pbox{
+    width: 80%;
+}
+/* ================================
+        mix end
+=================================== */
+/* ================================
+        footer start
+=================================== */
+footer{
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+footer .shape{
+    height: 500px;
+    background: saddlebrown;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    transform: rotate(-2deg);
+    position: absolute;
+    top: 32px;
+    left: 78px;
+    width: 100%;
+}
+
+footer .shape2{
+    height: 500px;
+    background: gold;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    transform: rotate(-2deg);
+    position: absolute;
+    top: 81px;
+    left: 0;
+    width: 100%;
+}
+/* ================================
+        footer end
+=================================== */
